@@ -2,7 +2,7 @@ fs = require 'fs'
 path = require 'path'
 readfile = (filename) -> fs.readFileSync path.dirname(__filename) + filename, encoding: 'utf8'
 BEM_CONTENT = """
-	#{readfile '/node_modules/bemto/bemto.jade'}
+	#{readfile '/bemto.jade'}
 
 	mixin i(data)
 		if !data
