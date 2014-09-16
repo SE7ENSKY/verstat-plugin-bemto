@@ -7,8 +7,8 @@ BEM_CONTENT = """
 	mixin i(data)
 		if !data
 			- data = {}
-		- data._bemto_chain = bemto_chain
-		- data._bemto_chain_contexts = bemto_chain_contexts
+		- data._bemto_chain = bemto_chain.slice()
+		- data._bemto_chain_contexts = bemto_chain_contexts.slice()
 		- data._bemto_regex_element = bemto_regex_element
 		- var blockName = bemto_chain[bemto_chain.length-1]
 		!= renderBlock(blockName, data)
